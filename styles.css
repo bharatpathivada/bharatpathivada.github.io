@@ -530,18 +530,6 @@ body.dark-mode .content-block {border-top-color:#87b3e8 !important;}
 body.dark-mode .location-section {background:var(--surface);border-color:var(--border);border-top-color:#68c5b9;}
 @media(max-width:600px){.location-section{padding:16px}.location-heading{align-items:flex-start;flex-direction:column}.office-map{height:270px}}
 
-/* Refined, accessible research project badges */
-.project-card .project-status { background:#e5f5ec; color:#176a48; border:1px solid #c9e9d7; }
-.project-card .project-status.completed { background:#edf1f6; color:#536477; border:1px solid #dce4ec; }
-.project-card .project-role.role-pi { background:#e8efff; color:#254e9b; border:1px solid #ccdcfc; }
-.project-card .project-role.role-copi { background:#f1eafe; color:#7045a5; border:1px solid #dfd0fa; }
-.project-card .project-role.researcher { background:#e5f5f7; color:#176b7d; border:1px solid #c7e9ed; }
-body.dark-mode .project-card .project-status {background:#193a30;color:#a2e5c5;border-color:#2f6752;}
-body.dark-mode .project-card .project-status.completed {background:#293442;color:#c5d1df;border-color:#46576b;}
-body.dark-mode .project-card .project-role.role-pi {background:#22375b;color:#b2cdfc;border-color:#3b5785;}
-body.dark-mode .project-card .project-role.role-copi {background:#382b50;color:#d7bafa;border-color:#604a80;}
-body.dark-mode .project-card .project-role.researcher {background:#193e46;color:#a1e5ed;border-color:#32636d;}
-
 /* Unified accent borders across the website */
 .profile-sidebar,.content-block,.sub-block,.pub-category-group,.contact-card,.contact-link {border-top:4px solid #2d9a91 !important;}
 .content-block,.sub-block:nth-child(2),.pub-category-group:nth-of-type(even),.contact-link:nth-child(even){border-top-color:#426da6 !important;}
@@ -679,4 +667,40 @@ body.dark-mode .project-card .project-role.researcher {
 }
 body.dark-mode .project-card .project-role.researcher.role-lead {
   background: #293a55; color: #c8d8f2; border-color: #405b7e;
+}
+
+
+/* Project badge layout fix: prevent long role labels from overflowing cards */
+.projects-page .project-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  min-width: 0;
+}
+.projects-page .project-card-top .project-status,
+.projects-page .project-card-top .project-role {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 27px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: .72rem !important;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  overflow-wrap: normal;
+  text-align: center;
+}
+@media (max-width: 440px) {
+  .projects-page .project-card-top { gap: 7px; }
+  .projects-page .project-card-top .project-role { max-width: 100%; }
 }

@@ -38,6 +38,43 @@
     @media (max-width:760px) { .project-grid{grid-template-columns:1fr}.project-card{padding:1.15rem}.project-card-top{flex-wrap:wrap} }
   </style>
   <style>
+
+/* Project badge layout fix: prevent long role labels from overflowing cards */
+.projects-page .project-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  min-width: 0;
+}
+.projects-page .project-card-top .project-status,
+.projects-page .project-card-top .project-role {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 27px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: .72rem !important;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  overflow-wrap: normal;
+  text-align: center;
+}
+@media (max-width: 440px) {
+  .projects-page .project-card-top { gap: 7px; }
+  .projects-page .project-card-top .project-role { max-width: 100%; }
+}
+  </style>
+  <style>
    .portfolio-note{font-size:.82rem;line-height:1.6;opacity:.75;margin:.8rem 0 0}
   </style>
  </head>
