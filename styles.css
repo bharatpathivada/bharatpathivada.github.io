@@ -121,9 +121,10 @@ a { color: inherit; }
   box-shadow: 0 12px 32px rgba(25, 48, 78, .13);
 }
 .profile-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.profile-name { margin: 0 0 7px; color: var(--text); font-size: 1.35rem; line-height: 1.25; letter-spacing: -.025em; }
+.profile-name { margin: 0 0 7px; color: var(--text); font-size: 1.22rem; line-height: 1.25; letter-spacing: -.025em; }
 .profile-title { margin: 0 0 5px; color: var(--accent-strong); font-size: .98rem; font-weight: 650; line-height: 1.5; }
 .profile-org { margin: 0 0 19px; color: var(--text-soft); font-size: .88rem; line-height: 1.55; }
+.profile-org br {display: block; content: ""; margin-bottom: 8px;}
 .profile-socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px; }
 .profile-socials a {
   width: 38px; height: 38px;
