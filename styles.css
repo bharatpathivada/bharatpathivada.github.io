@@ -412,10 +412,10 @@ a:hover {color:var(--secondary)}
 .education-list-styled {position:relative}
 .education-list-styled li {padding:11px 10px 11px 13px;border-left:3px solid #9ddbd2;background:rgba(232,247,243,.48);border-radius:0 10px 10px 0}
 .education-list-styled li:first-child {border-left-color:var(--accent)}
-.project-summary .summary-card:nth-child(1){background:#eaf3ff;border-color:#d2e4fc}
-.project-summary .summary-card:nth-child(2){background:#e6f6f1;border-color:#cceee2}
-.project-summary .summary-card:nth-child(3){background:#f1efff;border-color:#e1dcfc}
-.project-summary .summary-card:nth-child(4){background:#fff3e7;border-color:#fae3cb}
+.project-summary .summary-card:nth-child(1){background:#E3EFFD;border-color:#C6DDF8}
+.project-summary .summary-card:nth-child(2){background:#DDF4EC;border-color:#BCE6D8}
+.project-summary .summary-card:nth-child(3){background:#EDE8FC;border-color:#D9CEF7}
+.project-summary .summary-card:nth-child(4){background:#FFF0DE;border-color:#F5D7B5}
 .project-summary .summary-card:nth-child(1) .summary-number{color:#245f9b}
 .project-summary .summary-card:nth-child(2) .summary-number{color:#167d69}
 .project-summary .summary-card:nth-child(3) .summary-number{color:#6553a5}
@@ -704,3 +704,17 @@ body.dark-mode .project-card .project-role.researcher.role-lead {
   .projects-page .project-card-top { gap: 7px; }
   .projects-page .project-card-top .project-role { max-width: 100%; }
 }
+
+/* Clearer project summary labels on light backgrounds */
+body.academic-theme:not(.dark-mode) .project-summary .summary-label { color: #526176; font-weight: 600; }
+
+/* Match Research Projects heading/intro spacing to Publications */
+.projects-page .projects-hero { margin-bottom: 8px; }
+.projects-page .projects-hero .page-heading { margin-bottom: 10px; }
+.projects-page .projects-intro-note p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .96rem;
+  line-height: 1.7;
+}
+.projects-page .projects-intro-note { margin-bottom: 24px; }
