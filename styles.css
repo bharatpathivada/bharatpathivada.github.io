@@ -718,3 +718,39 @@ body.academic-theme:not(.dark-mode) .project-summary .summary-label { color: #52
   line-height: 1.7;
 }
 .projects-page .projects-intro-note { margin-bottom: 24px; }
+
+
+/* Contact page — streamlined compact link cards */
+.contact-shell .contact-card,
+body.dark-mode .contact-shell .contact-card {
+  padding: 0 !important;
+  border: 0 !important;
+  border-top: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.contact-shell .contact-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px !important;
+}
+.contact-shell .contact-link {
+  min-height: 82px;
+  padding: 16px 19px !important;
+  border: 1px solid var(--border) !important;
+  border-left: 3px solid var(--card-accent) !important;
+  border-radius: 12px;
+  background: var(--surface-solid);
+  box-shadow: 0 3px 12px rgba(27,43,67,.035);
+  gap: 15px;
+}
+.contact-shell .contact-link:nth-child(even) { border-left-color: #426da6 !important; }
+.contact-shell .contact-link i { font-size: 1.3rem; width: 25px; flex: 0 0 25px; }
+.contact-shell .contact-link strong { display: block; font-size: .95rem; font-weight: 650; }
+.contact-shell .contact-link small { margin-top: 4px; font-size: .81rem; line-height: 1.4; }
+.contact-shell .contact-link:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(27,43,67,.08); }
+body.dark-mode .contact-shell .contact-link { background: var(--surface); box-shadow: none; }
+@media (max-width: 620px) {
+  .contact-shell .contact-list { grid-template-columns: 1fr !important; }
+  .contact-shell .contact-link { min-height: 76px; }
+}
