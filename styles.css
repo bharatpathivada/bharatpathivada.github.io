@@ -850,3 +850,74 @@ body.academic-theme:not(.dark-mode) .education-list-styled li {
   background: #f0f8f5;
   border-left: 3px solid var(--card-accent) !important;
 }
+
+/* Experience section: consistent with the home-page education card */
+.experience-section { margin-top: 18px; }
+.experience-list { display: grid; gap: 12px; }
+.experience-entry { padding: 15px 17px; background: var(--surface-muted); border: 1px solid var(--border); border-radius: 11px; }
+.experience-organization { color: var(--text); font-size: .94rem; font-weight: 700; line-height: 1.45; margin-bottom: 11px; }
+.experience-location { display: block; margin-top: 3px; font-size: .79rem; font-weight: 400; color: var(--text-muted); }
+.experience-role { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 5px 0; font-size: .85rem; line-height: 1.5; }
+.experience-role strong { font-weight: 600; color: var(--text-soft); }
+.experience-role span { flex-shrink: 0; color: var(--text-muted); font-size: .79rem; }
+.pub-category-count { margin-left: auto; margin-right: 15px; color: var(--text-muted); font-size: .77rem; font-weight: 500; }
+@media (max-width: 600px) { .experience-role { flex-direction: column; gap: 0; } .experience-role span { flex-shrink: 1; } }
+
+/* Unified, softer mint cards for Education and Professional Experience */
+body.academic-theme:not(.dark-mode) .education-list-styled li,
+body.academic-theme:not(.dark-mode) .experience-entry {
+  background: #f5faf8;
+  border-left: 3px solid var(--card-accent) !important;
+}
+.experience-entry {
+  border: 0;
+  border-left: 3px solid var(--card-accent) !important;
+  border-radius: 0 10px 10px 0;
+  padding: 15px 17px;
+}
+body.dark-mode .experience-entry {
+  background: #292c30;
+  border-left-color: var(--card-accent) !important;
+}
+/* Match the publication counts across all three collapsible headings */
+.pub-category-count { font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 430px) {
+  .pub-category-heading { gap: 8px; font-size: .96rem; }
+  .pub-category-count { margin-right: 6px; font-size: .71rem; }
+}
+
+/* Compact journal access links: inline with each citation */
+.pub-inline-access { display: inline; margin-left: 5px; color: var(--accent-strong); font-size: .83rem; font-weight: 650; text-decoration: none; white-space: nowrap; }
+.pub-inline-access:hover { text-decoration: underline; }
+.pub-inline-access::after { content: " ↗"; font-size: .76em; }
+
+/* Uniform compact filled Online Access buttons, inline with citations */
+.pub-title-text .pub-access-compact {
+  display: inline-flex; vertical-align: baseline; align-items: center;
+  margin-left: 5px; padding: 1px 7px;
+  font-size: .72rem; font-weight: 600; line-height: 1.5;
+  border-radius: 5px; white-space: nowrap;
+}
+.pub-title-text .pub-inline-links { display: inline; }
+
+/* Minimal inline publication access links */
+.pub-title-text a.pub-access-link {
+  display: inline; margin-left: 5px; padding: 0;
+  background: none; border: 0; border-radius: 0; box-shadow: none;
+  color: #087f75; font-size: .86rem; font-weight: 600;
+  line-height: inherit; text-decoration: none; white-space: nowrap;
+}
+.pub-title-text a.pub-access-link:hover { color: #075e58; text-decoration: underline; background: none; transform: none; }
+body.dark-mode .pub-title-text a.pub-access-link { color: #70d6c5; }
+body.dark-mode .pub-title-text a.pub-access-link:hover { color: #a5eee1; }
+
+/* Subtle external-link indicator for publication access links */
+.pub-title-text a.pub-access-link::after {
+  content: '↗';
+  display: inline-block;
+  margin-left: 3px;
+  font-size: .85em;
+  font-weight: 600;
+  line-height: 1;
+  vertical-align: baseline;
+}
