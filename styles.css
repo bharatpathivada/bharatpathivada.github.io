@@ -921,3 +921,24 @@ body.dark-mode .pub-title-text a.pub-access-link:hover { color: #a5eee1; }
   line-height: 1;
   vertical-align: baseline;
 }
+
+/* Professional experience refinements */
+.experience-list { gap: 13px; }
+.experience-entry { padding: 18px 20px 17px; }
+.experience-organization { margin-bottom: 12px; line-height: 1.45; }
+.experience-location { margin-top: 5px; line-height: 1.55; }
+.experience-role { padding: 6px 0; gap: 16px; align-items: baseline; }
+.experience-role strong { color: #18212f; font-weight: 600; }
+body.dark-mode .experience-role strong { color: #f1f5f9; }
+@media (max-width: 600px) {
+  .experience-entry { padding: 15px 16px; }
+  .experience-role { gap: 2px; padding: 7px 0; }
+}
+
+/* Professional experience: compact role rows and softer title color */
+.experience-role { padding: 2px 0; gap: 12px; line-height: 1.45; }
+.experience-role strong { color: #46566a; font-weight: 600; }
+body.dark-mode .experience-role strong { color: #d0d8e2; }
+@media (max-width: 600px) {
+  .experience-role { padding: 3px 0; gap: 1px; }
+}
