@@ -942,3 +942,30 @@ body.dark-mode .experience-role strong { color: #d0d8e2; }
 @media (max-width: 600px) {
   .experience-role { padding: 3px 0; gap: 1px; }
 }
+
+/* Homepage light palette */
+body.academic-theme:not(.dark-mode):has(.hero-container > .profile-details) {
+  --bg: #f6f8fb;
+  --text-muted: #56677c;
+}
+body.academic-theme:not(.dark-mode):has(.hero-container > .profile-details) .interest-pill {
+  background: #f1f5f9;
+  color: #173f69;
+}
+body.academic-theme:not(.dark-mode):has(.hero-container > .profile-details) :is(.education-list-styled li, .experience-entry) {
+  background: #f8fafc;
+  border: 1px solid #e1e8f0;
+  border-left: 1px solid #e1e8f0 !important;
+  border-radius: 10px;
+}
+body.academic-theme:not(.dark-mode):has(.hero-container > .profile-details) [aria-labelledby="certifications-heading"] li {
+  border-left-color: #087f75 !important;
+  border-left-width: 3px !important;
+}
+body.academic-theme:not(.dark-mode):has(.hero-container > .profile-details) :is(.profile-title, .profile-center-link) {
+  color: #173f69;
+}
+body.academic-theme:not(.dark-mode):has(.hero-container > .profile-details) .cv-download-btn {
+  background: #173f69;
+  border-color: #173f69;
+}
