@@ -852,6 +852,7 @@ body.academic-theme:not(.dark-mode) .education-list-styled li {
 }
 
 /* Experience section: consistent with the home-page education card */
+.profile-details > [aria-labelledby="certifications-heading"],
 .experience-section { margin-top: 18px; }
 .experience-list { display: grid; gap: 12px; }
 .experience-entry { padding: 15px 17px; background: var(--surface-muted); border: 1px solid var(--border); border-radius: 11px; }
